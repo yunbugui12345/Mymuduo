@@ -1,0 +1,43 @@
+file(REMOVE_RECURSE
+  "/home/tom/桌面/muduo/muduo_mine/lib/libmuduo_mine.pdb"
+  "/home/tom/桌面/muduo/muduo_mine/lib/libmuduo_mine.so"
+  "CMakeFiles/muduo_mine.dir/Acceptor.cpp.o"
+  "CMakeFiles/muduo_mine.dir/Acceptor.cpp.o.d"
+  "CMakeFiles/muduo_mine.dir/Buffer.cpp.o"
+  "CMakeFiles/muduo_mine.dir/Buffer.cpp.o.d"
+  "CMakeFiles/muduo_mine.dir/Channel.cpp.o"
+  "CMakeFiles/muduo_mine.dir/Channel.cpp.o.d"
+  "CMakeFiles/muduo_mine.dir/CurrentThreah.cpp.o"
+  "CMakeFiles/muduo_mine.dir/CurrentThreah.cpp.o.d"
+  "CMakeFiles/muduo_mine.dir/DefaultPoller.cpp.o"
+  "CMakeFiles/muduo_mine.dir/DefaultPoller.cpp.o.d"
+  "CMakeFiles/muduo_mine.dir/EPollPoller.cpp.o"
+  "CMakeFiles/muduo_mine.dir/EPollPoller.cpp.o.d"
+  "CMakeFiles/muduo_mine.dir/EventLoop.cpp.o"
+  "CMakeFiles/muduo_mine.dir/EventLoop.cpp.o.d"
+  "CMakeFiles/muduo_mine.dir/EventLoopThread.cpp.o"
+  "CMakeFiles/muduo_mine.dir/EventLoopThread.cpp.o.d"
+  "CMakeFiles/muduo_mine.dir/EventLoopThreadPool.cpp.o"
+  "CMakeFiles/muduo_mine.dir/EventLoopThreadPool.cpp.o.d"
+  "CMakeFiles/muduo_mine.dir/InetAddress.cpp.o"
+  "CMakeFiles/muduo_mine.dir/InetAddress.cpp.o.d"
+  "CMakeFiles/muduo_mine.dir/Logger.cpp.o"
+  "CMakeFiles/muduo_mine.dir/Logger.cpp.o.d"
+  "CMakeFiles/muduo_mine.dir/Poller.cpp.o"
+  "CMakeFiles/muduo_mine.dir/Poller.cpp.o.d"
+  "CMakeFiles/muduo_mine.dir/Socket.cpp.o"
+  "CMakeFiles/muduo_mine.dir/Socket.cpp.o.d"
+  "CMakeFiles/muduo_mine.dir/TcpConnection.cpp.o"
+  "CMakeFiles/muduo_mine.dir/TcpConnection.cpp.o.d"
+  "CMakeFiles/muduo_mine.dir/TcpServer.cpp.o"
+  "CMakeFiles/muduo_mine.dir/TcpServer.cpp.o.d"
+  "CMakeFiles/muduo_mine.dir/Thread.cpp.o"
+  "CMakeFiles/muduo_mine.dir/Thread.cpp.o.d"
+  "CMakeFiles/muduo_mine.dir/Timestamp.cpp.o"
+  "CMakeFiles/muduo_mine.dir/Timestamp.cpp.o.d"
+)
+
+# Per-language clean rules from dependency scanning.
+foreach(lang CXX)
+  include(CMakeFiles/muduo_mine.dir/cmake_clean_${lang}.cmake OPTIONAL)
+endforeach()

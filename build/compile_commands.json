@@ -1,0 +1,104 @@
+[
+{
+  "directory": "/home/tom/桌面/muduo/muduo_mine/build",
+  "command": "/usr/bin/g++ -Dmuduo_mine_EXPORTS   -g -std=c++11 -g -fPIC -o CMakeFiles/muduo_mine.dir/Acceptor.cpp.o -c /home/tom/桌面/muduo/muduo_mine/Acceptor.cpp",
+  "file": "/home/tom/桌面/muduo/muduo_mine/Acceptor.cpp",
+  "output": "CMakeFiles/muduo_mine.dir/Acceptor.cpp.o"
+},
+{
+  "directory": "/home/tom/桌面/muduo/muduo_mine/build",
+  "command": "/usr/bin/g++ -Dmuduo_mine_EXPORTS   -g -std=c++11 -g -fPIC -o CMakeFiles/muduo_mine.dir/Buffer.cpp.o -c /home/tom/桌面/muduo/muduo_mine/Buffer.cpp",
+  "file": "/home/tom/桌面/muduo/muduo_mine/Buffer.cpp",
+  "output": "CMakeFiles/muduo_mine.dir/Buffer.cpp.o"
+},
+{
+  "directory": "/home/tom/桌面/muduo/muduo_mine/build",
+  "command": "/usr/bin/g++ -Dmuduo_mine_EXPORTS   -g -std=c++11 -g -fPIC -o CMakeFiles/muduo_mine.dir/Channel.cpp.o -c /home/tom/桌面/muduo/muduo_mine/Channel.cpp",
+  "file": "/home/tom/桌面/muduo/muduo_mine/Channel.cpp",
+  "output": "CMakeFiles/muduo_mine.dir/Channel.cpp.o"
+},
+{
+  "directory": "/home/tom/桌面/muduo/muduo_mine/build",
+  "command": "/usr/bin/g++ -Dmuduo_mine_EXPORTS   -g -std=c++11 -g -fPIC -o CMakeFiles/muduo_mine.dir/CurrentThreah.cpp.o -c /home/tom/桌面/muduo/muduo_mine/CurrentThreah.cpp",
+  "file": "/home/tom/桌面/muduo/muduo_mine/CurrentThreah.cpp",
+  "output": "CMakeFiles/muduo_mine.dir/CurrentThreah.cpp.o"
+},
+{
+  "directory": "/home/tom/桌面/muduo/muduo_mine/build",
+  "command": "/usr/bin/g++ -Dmuduo_mine_EXPORTS   -g -std=c++11 -g -fPIC -o CMakeFiles/muduo_mine.dir/DefaultPoller.cpp.o -c /home/tom/桌面/muduo/muduo_mine/DefaultPoller.cpp",
+  "file": "/home/tom/桌面/muduo/muduo_mine/DefaultPoller.cpp",
+  "output": "CMakeFiles/muduo_mine.dir/DefaultPoller.cpp.o"
+},
+{
+  "directory": "/home/tom/桌面/muduo/muduo_mine/build",
+  "command": "/usr/bin/g++ -Dmuduo_mine_EXPORTS   -g -std=c++11 -g -fPIC -o CMakeFiles/muduo_mine.dir/EPollPoller.cpp.o -c /home/tom/桌面/muduo/muduo_mine/EPollPoller.cpp",
+  "file": "/home/tom/桌面/muduo/muduo_mine/EPollPoller.cpp",
+  "output": "CMakeFiles/muduo_mine.dir/EPollPoller.cpp.o"
+},
+{
+  "directory": "/home/tom/桌面/muduo/muduo_mine/build",
+  "command": "/usr/bin/g++ -Dmuduo_mine_EXPORTS   -g -std=c++11 -g -fPIC -o CMakeFiles/muduo_mine.dir/EventLoop.cpp.o -c /home/tom/桌面/muduo/muduo_mine/EventLoop.cpp",
+  "file": "/home/tom/桌面/muduo/muduo_mine/EventLoop.cpp",
+  "output": "CMakeFiles/muduo_mine.dir/EventLoop.cpp.o"
+},
+{
+  "directory": "/home/tom/桌面/muduo/muduo_mine/build",
+  "command": "/usr/bin/g++ -Dmuduo_mine_EXPORTS   -g -std=c++11 -g -fPIC -o CMakeFiles/muduo_mine.dir/EventLoopThread.cpp.o -c /home/tom/桌面/muduo/muduo_mine/EventLoopThread.cpp",
+  "file": "/home/tom/桌面/muduo/muduo_mine/EventLoopThread.cpp",
+  "output": "CMakeFiles/muduo_mine.dir/EventLoopThread.cpp.o"
+},
+{
+  "directory": "/home/tom/桌面/muduo/muduo_mine/build",
+  "command": "/usr/bin/g++ -Dmuduo_mine_EXPORTS   -g -std=c++11 -g -fPIC -o CMakeFiles/muduo_mine.dir/EventLoopThreadPool.cpp.o -c /home/tom/桌面/muduo/muduo_mine/EventLoopThreadPool.cpp",
+  "file": "/home/tom/桌面/muduo/muduo_mine/EventLoopThreadPool.cpp",
+  "output": "CMakeFiles/muduo_mine.dir/EventLoopThreadPool.cpp.o"
+},
+{
+  "directory": "/home/tom/桌面/muduo/muduo_mine/build",
+  "command": "/usr/bin/g++ -Dmuduo_mine_EXPORTS   -g -std=c++11 -g -fPIC -o CMakeFiles/muduo_mine.dir/InetAddress.cpp.o -c /home/tom/桌面/muduo/muduo_mine/InetAddress.cpp",
+  "file": "/home/tom/桌面/muduo/muduo_mine/InetAddress.cpp",
+  "output": "CMakeFiles/muduo_mine.dir/InetAddress.cpp.o"
+},
+{
+  "directory": "/home/tom/桌面/muduo/muduo_mine/build",
+  "command": "/usr/bin/g++ -Dmuduo_mine_EXPORTS   -g -std=c++11 -g -fPIC -o CMakeFiles/muduo_mine.dir/Logger.cpp.o -c /home/tom/桌面/muduo/muduo_mine/Logger.cpp",
+  "file": "/home/tom/桌面/muduo/muduo_mine/Logger.cpp",
+  "output": "CMakeFiles/muduo_mine.dir/Logger.cpp.o"
+},
+{
+  "directory": "/home/tom/桌面/muduo/muduo_mine/build",
+  "command": "/usr/bin/g++ -Dmuduo_mine_EXPORTS   -g -std=c++11 -g -fPIC -o CMakeFiles/muduo_mine.dir/Poller.cpp.o -c /home/tom/桌面/muduo/muduo_mine/Poller.cpp",
+  "file": "/home/tom/桌面/muduo/muduo_mine/Poller.cpp",
+  "output": "CMakeFiles/muduo_mine.dir/Poller.cpp.o"
+},
+{
+  "directory": "/home/tom/桌面/muduo/muduo_mine/build",
+  "command": "/usr/bin/g++ -Dmuduo_mine_EXPORTS   -g -std=c++11 -g -fPIC -o CMakeFiles/muduo_mine.dir/Socket.cpp.o -c /home/tom/桌面/muduo/muduo_mine/Socket.cpp",
+  "file": "/home/tom/桌面/muduo/muduo_mine/Socket.cpp",
+  "output": "CMakeFiles/muduo_mine.dir/Socket.cpp.o"
+},
+{
+  "directory": "/home/tom/桌面/muduo/muduo_mine/build",
+  "command": "/usr/bin/g++ -Dmuduo_mine_EXPORTS   -g -std=c++11 -g -fPIC -o CMakeFiles/muduo_mine.dir/TcpConnection.cpp.o -c /home/tom/桌面/muduo/muduo_mine/TcpConnection.cpp",
+  "file": "/home/tom/桌面/muduo/muduo_mine/TcpConnection.cpp",
+  "output": "CMakeFiles/muduo_mine.dir/TcpConnection.cpp.o"
+},
+{
+  "directory": "/home/tom/桌面/muduo/muduo_mine/build",
+  "command": "/usr/bin/g++ -Dmuduo_mine_EXPORTS   -g -std=c++11 -g -fPIC -o CMakeFiles/muduo_mine.dir/TcpServer.cpp.o -c /home/tom/桌面/muduo/muduo_mine/TcpServer.cpp",
+  "file": "/home/tom/桌面/muduo/muduo_mine/TcpServer.cpp",
+  "output": "CMakeFiles/muduo_mine.dir/TcpServer.cpp.o"
+},
+{
+  "directory": "/home/tom/桌面/muduo/muduo_mine/build",
+  "command": "/usr/bin/g++ -Dmuduo_mine_EXPORTS   -g -std=c++11 -g -fPIC -o CMakeFiles/muduo_mine.dir/Thread.cpp.o -c /home/tom/桌面/muduo/muduo_mine/Thread.cpp",
+  "file": "/home/tom/桌面/muduo/muduo_mine/Thread.cpp",
+  "output": "CMakeFiles/muduo_mine.dir/Thread.cpp.o"
+},
+{
+  "directory": "/home/tom/桌面/muduo/muduo_mine/build",
+  "command": "/usr/bin/g++ -Dmuduo_mine_EXPORTS   -g -std=c++11 -g -fPIC -o CMakeFiles/muduo_mine.dir/Timestamp.cpp.o -c /home/tom/桌面/muduo/muduo_mine/Timestamp.cpp",
+  "file": "/home/tom/桌面/muduo/muduo_mine/Timestamp.cpp",
+  "output": "CMakeFiles/muduo_mine.dir/Timestamp.cpp.o"
+}
+]

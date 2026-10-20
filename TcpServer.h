@@ -6,6 +6,8 @@
 #include "noncopyable.h"
 #include "EventLoopThreadPool.h"
 #include "Callbacks.h"
+#include "TcpConnection.h"
+#include "Buffer.h"
 
 #include <functional>
 #include <string>
@@ -33,7 +35,7 @@ public:
 	void setMessageCallback(const MessageCallback &cb) { messageCallback_ = cb; }
 	void setWriteCompleteCallback(const WriteCompleteCallback &cb) { writeCompleteCallback_ = cb; }
 
-	void setThreadNum(int numThreads);
+	void setThreadNum(int numThreads);	
 
 	void start();
 

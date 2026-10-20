@@ -9,7 +9,7 @@ Thread::Thread(ThreadFunc func, const std::string &name)
 	:started_(false)
 	,joined_(false)
 	,tid_(0)
-	,func_(std::move(func))
+	,func_(std::move(func))	//
 	,name_(name)
 {
 	setDefaultName();
@@ -44,8 +44,8 @@ void Thread::join()
 
 void Thread::setDefaultName()
 {
-	int num=++numCreated_;
-	if(name_.empty())
+	int num=++numCreated_;	//只要创建了新线程，这个计数器一定会增加
+	if(name_.empty())	//只有当不传名字进来才会到这里
 	{
 		char buf[32]={0};
 		snprintf(buf,sizeof(buf),"Thread%d",num);

@@ -18,7 +18,16 @@ Tcpserver::Tcpserver(EventLoop *loop,
 					 const InetAddress &listenAddr,
 					 const std::string &namearg,
 					 Option option)
-	: loop_(CheckLoopNotNull(loop)), ipPort_(listenAddr.ToIpPort()), name_(namearg), acceptor_(new Acceptor(loop, listenAddr, option == kReusePort)), threadPool_(new EventLoopThreadPool(loop, name_)), connectionCallback_(), messageCallback_(), nextConnId_(1), started_(0)
+		: loop_(CheckLoopNotNull(loop))
+		, ipPort_(listenAddr.ToIpPort())
+		, name_(namearg)
+		, acceptor_(new Acceptor(loop, listenAddr
+		, option == kReusePort))
+		, threadPool_(new EventLoopThreadPool(loop, name_))
+		, connectionCallback_()
+		, messageCallback_()
+		, nextConnId_(1)
+		, started_(0)
 {
 	acceptor_->setNewConnectionCallback(std::bind(&Tcpserver::newConnection, this, std::placeholders::_1, std::placeholders::_2));
 }

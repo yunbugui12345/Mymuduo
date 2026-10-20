@@ -7,7 +7,7 @@
 
 class Channel;
 
-class EPollPoller : public Poller
+class EPollPoller : public Poller	//对epoll_create epoll_wait epoll_ctl的打包、处理Poller中的Channel以及更新poller中channel的状态
 {
 public:
 	EPollPoller(EventLoop *loop);

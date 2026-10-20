@@ -16,7 +16,7 @@ Channel::~Channel()
 {
 }
 
-void Channel::tie(const std::shared_ptr<void> &obj)
+void Channel::tie(const std::shared_ptr<void> &obj)		//管理生命周期		（附：这里用void是类型擦除，即任意类型的shared_ptr<T>都可以隐式转换成shared_ptr<void>）
 {
 	tie_ = obj;
 	tied_ = true;
@@ -24,7 +24,7 @@ void Channel::tie(const std::shared_ptr<void> &obj)
 
 void Channel::update()
 {
-	loop_->removeChannel(this);
+	loop_->updateChannel(this);
 }
 
 void Channel::remove()

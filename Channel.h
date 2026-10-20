@@ -8,16 +8,16 @@
 
 class EventLoop; // 提前声明
 
-class Channel : noncopyable
+class Channel : noncopyable		//用fd和Eventloop* loop构造的一个打包好的通道
 {
 public:
 	using EventCallback = std::function<void()>;
 	using ReadEventCallback = std::function<void(Timestamp)>;
 
-	Channel(EventLoop *loop, int fd);
-	~Channel();
+	Channel(EventLoop *loop, int fd);							// 1
+	~Channel();													// 2
 
-	void handleEvent(Timestamp receiveTime);
+	void handleEvent(Timestamp receiveTime);					// 3
 
 	void setReadCallback(ReadEventCallback cb) { readCallback_ = std::move(cb); }
 	void setWriteCallback(EventCallback cb) { writeCallback_ = std::move(cb); }
@@ -25,7 +25,7 @@ public:
 	void setErrorCallback(EventCallback cb) { errorCallback_ = std::move(cb); }
 
 	// 防止channel被手动remove后channel还在执行回调操作
-	void tie(const std::shared_ptr<void> &);
+	void tie(const std::shared_ptr<void> &);					// 4
 
 	int fd() const { return fd_; }
 	int events() const { return events_; }
@@ -64,11 +64,11 @@ public:
 	void set_index(int idx) { index_ = idx; }
 
 	EventLoop *ownerLoop() { return loop_; }
-	void remove();
+	void remove();										// 5
 
 private:
-	void update();
-	void handleEventWithGuard(Timestamp receiveTime);
+	void update();										// 6
+	void handleEventWithGuard(Timestamp receiveTime);	// 7
 
 	static const int kNoneEvent;
 	static const int kReadEvent;
@@ -77,10 +77,10 @@ private:
 	EventLoop *loop_;
 	const int fd_;
 	int events_;
-	int revents_;
-	int index_;
+	int revents_;			//用于记录读写事件（就像是linux中读写运行权限一样）
+	int index_;				//用于记录channel在epoll里的状态：-1 未进epoll 1 在epoll中 -1 已被epoll移除
 
-	std::weak_ptr<void> tie_;
+	std::weak_ptr<void> tie_;	//用于监管生命周期（Tcpconnection）
 	bool tied_;
 
 	ReadEventCallback readCallback_;

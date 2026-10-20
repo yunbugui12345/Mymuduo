@@ -32,7 +32,7 @@ EventLoop::EventLoop()
 	, wakeupfd_(createEventfd())
 	, wakeupChannel_(new Channel(this, wakeupfd_))
 {
-	LOG_DEBUG("EventLoop create %p in thread %d\n", this, threadId_);
+	LOG_DEBUG("EventLoop create %p in thread %d\n", this, threadId_);//
 	if (t_loopInThisThread)
 	{
 		LOG_FATAL("Another EventLoop %p exits in this thread %d \n", t_loopInThisThread, threadId_);
@@ -42,7 +42,8 @@ EventLoop::EventLoop()
 		t_loopInThisThread = this;
 	}
 
-	wakeupChannel_->setReadCallback(std::bind(&EventLoop::handleRead, this)); // 绑定器，这个研究一下
+	wakeupChannel_->setReadCallback(std::bind(&EventLoop::handleRead, this)); 	// 绑定器 bind的作用是将从第二个开始的参数传给第一个对象作为传参 
+																				//这里和this绑定是因为在handleread函数内部需要访问成员变量
 	wakeupChannel_->enableReading();
 }
 

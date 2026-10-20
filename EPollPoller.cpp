@@ -24,7 +24,7 @@ EPollPoller::~EPollPoller()
 	::close(epollfd_);
 }
 
-Timestamp EPollPoller::poll(int timeoutMs, ChannelList *activeChannels)
+Timestamp EPollPoller::poll(int timeoutMs, ChannelList *activeChannels)	// epoll_wait 有事件发生就将事件装进list内
 {
 	// 此处应该用LOG_DEBUG更合理
 	LOG_INFO("func=%s => total count:%d\n", __FUNCTION__, channels_.size());
@@ -57,7 +57,7 @@ Timestamp EPollPoller::poll(int timeoutMs, ChannelList *activeChannels)
 	return now;
 }
 
-void EPollPoller::updateChannel(Channel *channel)
+void EPollPoller::updateChannel(Channel *channel)	// 将变化后的channel更新到poller中的channels_中
 {
 	const int index = channel->index();
 	LOG_INFO("func=%s => fd=%d index=%d \n", __FUNCTION__, channel->fd(), index);
@@ -88,7 +88,7 @@ void EPollPoller::updateChannel(Channel *channel)
 	}
 }
 
-void EPollPoller::removeChannel(Channel *channel)
+void EPollPoller::removeChannel(Channel *channel)	
 {
 	int fd = channel->fd();
 	channels_.erase(fd);

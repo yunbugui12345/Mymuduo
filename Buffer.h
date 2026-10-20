@@ -2,8 +2,8 @@
 
 #include <vector>
 #include <stddef.h>
-#include<string>
-#include<algorithm>
+#include <string>
+#include <algorithm>
 
 class Buffer
 {
@@ -31,16 +31,16 @@ public:
 		return readerIndex_;
 	}
 
-	const char* peek()const
+	const char *peek() const
 	{
-		return begin()+readerIndex_;
+		return begin() + readerIndex_;
 	}
 
 	void retrieve(size_t len)
 	{
-		if(len<readableBytes())
+		if (len < readableBytes())
 		{
-			readerIndex_+=len;
+			readerIndex_ += len;
 		}
 		else
 		{
@@ -50,7 +50,7 @@ public:
 
 	void retrieveAll()
 	{
-		readerIndex_=writerIndex_=kCheapPrepend;
+		readerIndex_ = writerIndex_ = kCheapPrepend;
 	}
 
 	std::string retrieveAllAsString()
@@ -60,56 +60,56 @@ public:
 
 	std::string retrieveAsString(size_t len)
 	{
-		std::string result(peek(),len);
+		std::string result(peek(), len);
 		retrieve(len);
 		return result;
 	}
 
 	void ensureWritableBytes(size_t len)
 	{
-		if(writableBytes()<len)
+		if (writableBytes() < len)
 		{
 			makeSpace(len);
 		}
 	}
 
-	void append(const char* data,size_t len)
+	void append(const char *data, size_t len)
 	{
 		ensureWritableBytes(len);
-		std::copy(data,data+len,beginWrite());
-		writerIndex_+=len;
+		std::copy(data, data + len, beginWrite());
+		writerIndex_ += len;
 	}
 
-	char* beginWrite()//为什么这里不能加const？
+	char *beginWrite() // 为什么这里不能加const？
 	{
-		return begin()+writerIndex_;
+		return begin() + writerIndex_;
 	}
 
-	ssize_t readFd(int fd,int *saveErrno);
-	ssize_t writeFd(int fd,int *saveErrno);
+	ssize_t readFd(int fd, int *saveErrno);
+	ssize_t writeFd(int fd, int *saveErrno);
 
 private:
-	char* begin()
+	char *begin()
 	{
 		return &*buffer_.begin();
 	}
-	const char* begin()const
+	const char *begin() const
 	{
 		return &*buffer_.begin();
 	}
 
 	void makeSpace(size_t len)
 	{
-		if(writableBytes()+prependableBytes()<len+kCheapPrepend)
+		if (writableBytes() + prependableBytes() < len + kCheapPrepend)
 		{
-			buffer_.resize(writerIndex_+len);
+			buffer_.resize(writerIndex_ + len);
 		}
 		else
 		{
-			size_t readable=readableBytes();
-			std::copy(begin()+readerIndex_,begin()+writerIndex_,begin()+kCheapPrepend);
-			readerIndex_=readerIndex_+readable;
-			writerIndex_=readerIndex_+readable;
+			size_t readable = readableBytes();
+			std::copy(begin() + readerIndex_, begin() + writerIndex_, begin() + kCheapPrepend);
+			readerIndex_ = readerIndex_ + readable;
+			writerIndex_ = readerIndex_ + readable;
 		}
 	}
 

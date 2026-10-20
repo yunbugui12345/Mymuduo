@@ -35,7 +35,7 @@ Acceptor::~Acceptor()
 
 void Acceptor::listen()
 {
-	listening_=true;
+	listening_ = true;
 	acceptSocket_.listen();
 	acceptChannel_.enableReading();
 }
@@ -58,9 +58,9 @@ void Acceptor::handleRead()
 	else
 	{
 		LOG_ERROR("%s:%s:%d accept err:%d \n", __FILE__, __FUNCTION__, __LINE__, errno);
-		if(errno==EMFILE)
+		if (errno == EMFILE)
 		{
-		LOG_ERROR("%s:%s:%d socket reached limit  \n", __FILE__, __FUNCTION__, __LINE__);
+			LOG_ERROR("%s:%s:%d socket reached limit  \n", __FILE__, __FUNCTION__, __LINE__);
 		}
 	}
 }
